@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__leftpart">
+          <div class="header__logo-block">
+            <a href="index.html" class="logo"
+              ><span class="logo__accent">Web</span>Studio</a
+            >
+          </div>
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li class="header__menu__item">
+                <a href="index.html" class="menu-nav-item__link">Студія</a>
+              </li>
+              <li class="header__menu__item header__menu__item_undeline">
+                <a
+                  href="portfolio.html"
+                  class="menu-nav-item__link header-link-highline"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="header__menu__item">
+                <a href="#" class="menu-nav-item__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <address class="address-items">
+          <a href="mailto:info@devstudio.com" class="address-link"
+            ><svg
+              class="sprite header-sprites envelope-sprite"
+              width="14"
+              heigth="10"
+            >
+              <use href="./images/sprite.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a
+          >
+          <a href="tel:+380961111111" class="address-link"
+            ><svg
+              class="sprite header-sprites smartphone-sprite"
+              width="10"
+              height="14"
+            >
+              <use href="./images/sprite.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11</a
+          >
+        </address>
+        <button type="button" class="open-mobile-menu-btn" data-menu-open>
+          <svg class="open-mobile-menu-btn__icon" width="40" height="40">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/sprite.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list">
+            <li>
+              <a href="index.html" class="mobile-menu__list-item">Студія</a>
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                class="mobile-menu__list-item header-link-highline"
+                >Портфоліо</a
+              >
+            </li>
+            <li><a href="#" class="mobile-menu__list-item">Контакти</a></li>
+          </ul>
+          <div class="mobile-menu__info-block">
+            <address>
+              <a
+                href="tel:+380961111111"
+                class="mobile-menu__info-block-links address-link"
+                >+38 096 111 11 11</a
+              >
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu__info-block-links address-link"
+                >info@devstudio.com</a
+              >
+            </address>
+            <div class="mobile-menu__info-block-socials">
+              <a
+                href="#"
+                class="mobile-menu__info-block-socials-links border-right"
+                >Instagram</a
+              ><a
+                href="#"
+                class="mobile-menu__info-block-socials-links border-right"
+                >Twitter</a
+              ><a
+                href="#"
+                class="mobile-menu__info-block-socials-links border-right"
+                >Facebook</a
+              ><a href="#" class="mobile-menu__info-block-socials-links"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN-CONTENT-SECTION -->
+    <main class="main-background">
+      <section class="section">
+        <div class="container">
+          <!-- PORTFOLIO-NAV -->
+          <nav>
+            <ul class="portfolio-nav">
+              <li>
+                <button class="portfolio-nav__btn">Усі</button>
+              </li>
+              <li>
+                <button class="portfolio-nav__btn">Веб-сайти</button>
+              </li>
+              <li>
+                <button class="portfolio-nav__btn">Додатки</button>
+              </li>
+              <li>
+                <button class="portfolio-nav__btn">Дизайн</button>
+              </li>
+              <li>
+                <button class="portfolio-nav__btn">Маркетинг</button>
+              </li>
+            </ul>
+          </nav>
+          <!-- PORTFOLIO-PRODUCTS -->
+          <ul class="products">
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-1.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-1@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-1.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-1@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-1.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-1@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-1.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-1.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-1@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-1.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Ноутбук" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Технокряк</h4>
+                <p class="product-text__desc">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-2.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-2@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-2.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-2@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-2.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-2@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-2.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-2.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-2@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-2.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Постер" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">
+                  Постер New Orlean vs Golden Star
+                </h4>
+                <p class="product-text__desc">Дизайн</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-3.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-3@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-3.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-3.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-3@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-3.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-3@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-3.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-3@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-3.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Риба" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Ресторан Seafood</h4>
+                <p class="product-text__desc">Додаток</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-4.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-4@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-4.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-4@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-4.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-4@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-4.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-4@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-4.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-4@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-4.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-4@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Навушники" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Проєкт Prime</h4>
+                <p class="product-text__desc">Маркетинг</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-5.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-5@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-5.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-5@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-5.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-5@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-5.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-5@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-5.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-5@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-5.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-5@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Коробки" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Проєкт Boxes</h4>
+                <p class="product-text__desc">Додаток</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-6.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-6@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-6.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-6@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-6.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-6@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-6.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-6@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-6.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-6@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-6.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-6@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Монітор" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Inspiration has no Borders</h4>
+                <p class="product-text__desc">Веб-сайт</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-7.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-7@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-7.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-7@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-7.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-7@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-7.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-7@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-7.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-7@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-7.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-7@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Книга" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Видання Limited Edition</h4>
+                <p class="product-text__desc">Дизайн</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-8.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-8@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-8.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-8@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-8.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-8@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-8.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-8@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-8.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-8@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-8.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-8@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Бірка" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Проєкт LAB</h4>
+                <p class="product-text__desc">Маркетинг</p>
+              </div>
+            </li>
+            <li class="products-list-item">
+              <div class="products__image-block">
+                <p class="products__hidden-info">
+                  Ресурс пропонує комплексні пропозиції з різним рівнем
+                  функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                  вичерпні відомості про компанію чи приватну особу.
+                </p>
+                <picture class="products__picture">
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-9.webp    1x,
+                      ./images/products-img-mobile/products-img-mobile-9@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-mobile/products-img-mobile-9.jpg    1x,
+                      ./images/products-img-mobile/products-img-mobile-9@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-9.webp    1x,
+                      ./images/products-img-tablet/products-img-tablet-9@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-tablet/products-img-tablet-9.jpg    1x,
+                      ./images/products-img-tablet/products-img-tablet-9@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-9.webp    1x,
+                      ./images/products-img-desktop/products-img-desktop-9@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/products-img-desktop/products-img-desktop-9.jpg    1x,
+                      ./images/products-img-desktop/products-img-desktop-9@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img class="products__image" src="" alt="Ноутбук" />
+                </picture>
+              </div>
+              <div class="product-text">
+                <h4 class="product-text__name">Growing Business</h4>
+                <p class="product-text__desc">Додаток</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bottom">
+      <div class="container bottom__container">
+        <div class="bottom__block-main bottom__column">
+          <div class="bottom__block-center bottom__column">
+            <a href="index.html" class="logo logo_dark-theme">
+              <span class="logo__accent">Web</span>Studio
+            </a>
+
+            <address>
+              <ul class="address-footer bottom__column">
+                <li>м. Київ, пр-т Лесі Українки, 26</li>
+                <li>
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address-link bottom__address-link address-link_dark-theme"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+380961111111"
+                    class="address-link bottom__address-link address-link_dark-theme"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="bottom__social-block bottom__column">
+            <h4 class="bottom__block-title">приєднуйтесь</h4>
+            <ul class="bottom__social-block-list">
+              <li class="bottom__social-block-list-item">
+                <a href="#" class="bottom__social-links">
+                  <svg class="sprite social-links">
+                    <use href="./images/sprite.svg#icon-instagram"></use></svg
+                ></a>
+              </li>
+              <li class="bottom__social-block-list-item">
+                <a href="#" class="bottom__social-links bottom__column"
+                  ><svg class="sprite social-links">
+                    <use href="./images/sprite.svg#icon-twitter"></use></svg
+                ></a>
+              </li>
+              <li class="bottom__social-block-list-item">
+                <a href="#" class="bottom__social-links"
+                  ><svg class="sprite social-links">
+                    <use href="./images/sprite.svg#icon-facebook"></use></svg
+                ></a>
+              </li>
+              <li class="bottom__social-block-list-item">
+                <a href="#" class="bottom__social-links"
+                  ><svg class="sprite social-links">
+                    <use href="./images/sprite.svg#icon-linkedin"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__block-aside bottom__column">
+            <span class="bottom__block-title bottom__block-aside-title"
+              >Підпишіться на розсилку</span
+            >
+            <div class="bottom__subcribption-block bottom__column">
+              <input
+                type="email"
+                class="bottom__input"
+                placeholder="E-mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+              <button type="button" class="main-button bottom__btn">
+                <p class="main-button__text">Підписатися</p>
+                <svg
+                  class="bottom__subcription-block-srpite"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/sprite.svg#icon-plane"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

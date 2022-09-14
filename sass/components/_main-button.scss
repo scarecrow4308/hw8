@@ -1,0 +1,27 @@
+.main-button {
+  display: block;
+  margin: auto;
+  background: var(--logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0px;
+  transition: box-shadow var(--transformation);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: -1px 1px 12px -6px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: -1px 1px 12px -6px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: -1px 1px 12px -6px rgba(255, 255, 255, 0.75);
+  }
+}
+
+.main-button__text {
+  padding: 10px 24px;
+  display: block;
+  color: var(--bg-color-main);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+}

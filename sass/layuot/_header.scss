@@ -1,0 +1,148 @@
+.header__menu {
+  display: none;
+}
+
+.address-items {
+  display: none;
+}
+
+.open-mobile-menu-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-btn {
+    display: none;
+  }
+
+  .header {
+    height: 80px;
+    background-color: var(--bg-color-main);
+  }
+
+  .header__container {
+    height: 100%;
+  }
+
+  .header__leftpart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 510px;
+  }
+
+  .header__menu {
+    display: flex;
+    column-gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .header__menu__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 80px;
+  }
+
+  .menu-nav-item__link {
+    color: var(--font-color-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+
+    transition: color var(--transformation);
+
+    &:hover,
+    &:focus {
+      color: var(--logo-color);
+    }
+
+    &::after {
+      opacity: 0;
+      display: block;
+      position: absolute;
+      content: "";
+      background-color: var(--logo-color);
+      height: 5px;
+      bottom: 0;
+      width: 100%;
+      border-radius: 2px;
+      transition: opacity var(--transformation);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+    }
+  }
+
+  .header__menu__item_undeline::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background: var(--logo-color);
+    height: 5px;
+    bottom: 0;
+    width: 100%;
+    border-radius: 2px;
+
+    transition: var(--transformation);
+  }
+
+  .address-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+
+  .header-sprites {
+    margin-right: 8px;
+
+    .address-link:hover &,
+    .address-link:focus & {
+      fill: var(--logo-color);
+    }
+  }
+
+  .envelope-sprite {
+    width: 14px;
+    height: 10px;
+  }
+
+  .smartphone-sprite {
+    width: 10px;
+    height: 14px;
+  }
+}
+.header-link-highline {
+  color: var(--logo-color);
+  transition: color var(--transformation);
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-nav-item__link {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+  .address-items {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 30px;
+  }
+}

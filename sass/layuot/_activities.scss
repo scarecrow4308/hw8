@@ -1,0 +1,38 @@
+@media screen and (max-width: 1199px) {
+  .activities-section {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activities-section {
+    padding-top: 47px;
+  }
+  .activities-section__pics {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .activities-section__pics-item {
+    position: relative;
+    width: 370px;
+  }
+
+  .activities-section__desc-block {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--bg-color-main);
+    @include font(14px, 700, 16px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
