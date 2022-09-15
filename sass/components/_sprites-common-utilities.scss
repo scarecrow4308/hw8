@@ -1,5 +1,5 @@
 .sprite {
   display: block;
-  fill: #afb1b8;
+  fill: var(--icon-light);
   transition: fill var(--transformation);
 }

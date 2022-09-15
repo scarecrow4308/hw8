@@ -1,10 +1,14 @@
 .social-links {
   width: 20px;
   height: 20px;
-  fill: var(--bg-color-main);
+  fill: var(--icon-light);
 
   .team-section__links-item:hover &,
   .team-section__links-item:focus & {
     fill: var(--bg-color-main);
   }
+}
+
+.icon-dark-theme {
+  fill: var(--bg-color-main);
 }

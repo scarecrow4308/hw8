@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.bottom__block-center {
-  row-gap: 20px;
-}
-
 .address-footer {
   gap: 8px;
   margin-bottom: 60px;
@@ -130,6 +126,10 @@
 
   .bottom__input {
     width: 450px;
+  }
+
+  .address-footer {
+    margin-bottom: 0;
   }
 }
 
